@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import CreateFormDialog from '@/components/biz/create-form-dialog';
 
 export default function Page(props: {
   params: Promise<{
@@ -23,9 +24,17 @@ export default function Page(props: {
     return <div>Loading...</div>;
   }
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-2xl font-bold mb-4">Forms List Page</h1>
-      <p>Lang: {params.lang}</p>
+    <div className="min-h-screen p-6 md:p-8">
+      {/* Header Section */}
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-semibold text-gray-900">Settings</h1>
+          <p className="mt-1 text-gray-600">
+            Easily collect testimonials from your customers using a simple link
+          </p>
+        </div>
+        <CreateFormDialog />
+      </div>
     </div>
   );
 }
