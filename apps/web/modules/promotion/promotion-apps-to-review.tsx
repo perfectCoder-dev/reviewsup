@@ -2,9 +2,8 @@
 
 import React, { use, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ColumnFiltersState, SortingState } from '@tanstack/react-table';
 import { api } from '@/lib/api-client';
-import { useSession, useUserContext } from '@/context/UserProvider';
+import { useSession } from '@/context/UserProvider';
 import {
   ProductCategory,
   ProductEntity,
