@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { use } from 'react';
 import { PromotionNewProduct } from '@/modules/promotion/promotion-new-product';
 
 export default function Page(props: {
@@ -9,5 +9,8 @@ export default function Page(props: {
     workspaceId: string;
   }>;
 }) {
-  return <PromotionNewProduct params={props.params} />;
+  const { lang, workspaceId } = use(props.params);
+  return (
+    <PromotionNewProduct mode="new" lang={lang} workspaceId={workspaceId} />
+  );
 }
