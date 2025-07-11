@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { use } from 'react';
 import ReviewListPage from '@/modules/review/review-list-page';
 
 export default function Page(props: {
@@ -9,5 +9,8 @@ export default function Page(props: {
     workspaceId: string;
   }>;
 }) {
-  return <ReviewListPage params={props.params} />;
+  const { lang, workspaceId } = use(props.params);
+  return (
+    <ReviewListPage lang={lang} workspaceId={workspaceId} status={undefined} />
+  );
 }
