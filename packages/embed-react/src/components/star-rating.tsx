@@ -1,9 +1,10 @@
+'use client'
 import { cn } from '../lib/utils';
 import React from 'react';
 
-export default function StarRating(props: {
+export function StarRating(props: {
   value: number;
-  onChange: (val: number) => void;
+  onChange?: (val: number) => void;
   className?: string;
   size?: 'sm' | 'md' | 'lg';
 }) {
@@ -12,7 +13,6 @@ export default function StarRating(props: {
       {[...Array(5)].map((_, i) => (
         <svg
           key={i}
-          onClick={() => props.onChange(i + 1)}
           className={cn(
             'cursor-pointer',
             props.size === 'sm'
