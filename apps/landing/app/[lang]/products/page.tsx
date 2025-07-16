@@ -1,6 +1,8 @@
 import { ProductList } from '@/modules/product/product-list';
 import { Metadata } from 'next';
 import { fetchProductList } from '@/actions/fetch-product-list';
+import { use } from 'react';
+import { ProductStatus } from '@reviewsup/api/products';
 
 export async function generateMetadata(props: {
   params: Promise<{
@@ -8,7 +10,6 @@ export async function generateMetadata(props: {
   }>;
 }): Promise<Metadata | null> {
   const { lang } = await props.params;
-  const product = await fetchProductList();
   return {
     title: `Product List`,
     description:
@@ -24,5 +25,6 @@ export default async function Page(props: {
     lang: string;
   }>;
 }) {
-  return <ProductList params={props.params} />;
+  const { lang } = await props.params;
+  return <ProductList status={ProductStatus.listing} lang={lang} />;
 }
