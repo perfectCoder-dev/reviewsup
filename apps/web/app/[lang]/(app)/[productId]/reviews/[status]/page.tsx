@@ -12,6 +12,11 @@ export default function Page(props: {
 }) {
   const { lang, productId, status } = use(props.params);
   return (
-    <ReviewListPage lang={lang} productId={productId} status={status} />
+    <ReviewListPage
+      lang={lang}
+      productId={productId}
+      status={status}
+      mode={'productId'}
+    />
   );
 }
