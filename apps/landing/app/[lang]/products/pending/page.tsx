@@ -24,5 +24,12 @@ export default async function Page(props: {
   }>;
 }) {
   const { lang } = await props.params;
-  return <ProductList status={ProductStatus.pendingForReceive} lang={lang} />;
+  return (
+    <ProductList
+      title={'Pending Products'}
+      status={ProductStatus.pendingForReceive}
+      lang={lang}
+      defaultTags={[]}
+    />
+  );
 }
