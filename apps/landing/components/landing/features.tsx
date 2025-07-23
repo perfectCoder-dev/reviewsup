@@ -26,15 +26,14 @@ export function FeatureGrid(props: {
   }[];
 }) {
   return (
-    <section id="features" className="container space-y-6 p-4">
-      <div className="mx-auto flex max-w-6xl flex-col items-center space-y-4 text-center">
+    <section className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col items-center gap-4 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold">{props.title}</h2>
         <p className="max-w-[85%] text-muted-foreground sm:text-lg">
           {props.subtitle}
         </p>
       </div>
-
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
+      <div className="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
         {props.items.map((item, index) => (
           <FeatureGridItem key={index} {...item} />
         ))}
