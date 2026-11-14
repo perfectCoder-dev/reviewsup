@@ -131,28 +131,3 @@ We welcome contributions from the community!
 4. Push to the branch (git push origin feature/your-feature)
 5. Create a new Pull Request
 
-## 🛡️ Security
-
-If you discover a vulnerability, please report it responsibly.
-
-Email: security@reviewsup.io
-
-We take security and data privacy seriously.
-
-## 📬 Contact Us
-
-🌐 Website: https://reviewsup.io
-
-🐦 Twitter: @reviewsup_io
-
-📫 Email: hello@reviewsup.io
-
-## 📄 License
-
-reviewsup.io is open-source software licensed under the MIT License.
-
-Made with ❤️ by the reviewsup.io team.
-
-:5500 api
-:5510 web
-:5520 landing
