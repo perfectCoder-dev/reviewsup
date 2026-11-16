@@ -74,7 +74,7 @@ No installation required. Sign up and start collecting reviews in minutes:
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:allenyan513/reviewsup.io.git
+git clone git@github.com:perfectCoder-dev/reviewsup.git
 cd reviewsup.io
 ```
 
